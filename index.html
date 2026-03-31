@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>မက်ထရို အိမ်ခြံမြေ | မန္တလေးမြို့ အိမ်ခြံမြေ ဝန်ဆောင်မှု</title>
+    <meta name="description" content="မက်ထရို အိမ်ခြံမြေ - မန္တလေးမြို့ရှိ အဆင့်မြင့် အိမ်ခြံမြေ ဝန်ဆောင်မှု။ အခန်းခြင်း၊ အိမ်၊ ရုံးခန်းများ ရှာဖွေရန်။">
+    <meta name="keywords" content="မက်ထရို အိမ်ခြံမြေ, မန္တလေး, အိမ်ခြံမြေ, အခန်းခြင်း, အိမ်ငှား, အိမ်ရောင်း">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://metrorealty.com/">
+    <meta property="og:title" content="မက်ထရို အိမ်ခြံမြေ | မန္တလေးမြို့">
+    <meta property="og:description" content="မန္တလေးမြို့ရှိ အဆင့်မြင့် အိမ်ခြံမြေ ဝန်ဆောင်မှု">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=80">
+
+    <!-- JSON-LD Schema for Real Estate -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "RealEstateAgent",
+      "name": "မက်ထရို အိမ်ခြံမြေ",
+      "image": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=600&q=80",
+      "@id": "",
+      "url": "https://metrorealty.com",
+      "telephone": "+959123456789",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "မန္တလေးမြို့ အမှတ် ၁၂၃",
+        "addressLocality": "မန္တလေး",
+        "postalCode": "05011",
+        "addressCountry": "MM"
+      }
+    }
+    </script>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <!-- Myanmar Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Padauk:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-900 font-padauk">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-900" style="font-family: 'Padauk', sans-serif;">
+                မက်ထရို အိမ်ခြံမြေ
+            </div>
+            <nav class="hidden md:flex space-x-8 font-semibold">
+                <a href="#" class="hover:text-blue-700 transition">အဖြေ</a>
+                <a href="#listings" class="hover:text-blue-700 transition">ပိုင်ဆိုင်မှုများ</a>
+                <a href="#about" class="hover:text-blue-700 transition">အကြောင်း</a>
+                <a href="#contact" class="hover:text-blue-700 transition">ဆက်သွယ်ရန်</a>
+            </nav>
+            <button class="md:hidden text-2xl" id="menuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- AdSense Placeholder 1: Below Header -->
+    <div class="container mx-auto px-4 py-4">
+        <div class="adsense-placeholder bg-gray-200 border-2 border-dashed border-gray-400 h-24 flex items-center justify-center text-gray-500 rounded-lg" style="font-family: 'Padauk', sans-serif;">
+            <span>AdSense - ကြော်ငြာနေရာ (ထိပ်ပိုင်း)</span>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative h-[60vh] flex items-center justify-center text-white text-center px-4 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1920&q=80" alt="အဆင့်မြင့် အိမ်" class="absolute inset-0 w-full h-full object-cover z-0 brightness-50">
+        <div class="relative z-10 max-w-2xl">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4" style="font-family: 'Padauk', sans-serif;">သင်၏ အိပ်မက်ရဲ့ အိမ်ကို ရှာဖွေပါ</h1>
+            <p class="text-lg md:text-xl mb-8 font-light">မန္တလေးမြို့ရှိ အဆင့်မြင့် ပိုင်ဆိုင်မှုများ</p>
+            
+            <!-- Search & Filter -->
+            <div class="bg-white p-2 rounded-xl shadow-2xl flex flex-col md:flex-row gap-2">
+                <input type="text" id="searchInput" placeholder="တည်နေရာ သို့မဟုတ် ခေါင်းစဉ်ရှာဖွေပါ..." class="flex-grow p-3 text-gray-800 focus:outline-none rounded-lg border border-gray-100" style="font-family: 'Padauk', sans-serif;">
+                <select id="categoryFilter" class="p-3 text-gray-800 focus:outline-none rounded-lg border border-gray-100 bg-white" style="font-family: 'Padauk', sans-serif;">
+                    <option value="all">အားလုံး</option>
+                    <option value="apartment">အခန်းခြင်း</option>
+                    <option value="villa">အိမ်</option>
+                    <option value="office">ရုံးခန်း</option>
+                </select>
+                <button id="searchBtn" class="bg-blue-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-800 transition" style="font-family: 'Padauk', sans-serif;">ရှာဖွေ</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Listings Section -->
+    <main id="listings" class="container mx-auto px-4 py-12">
+        <h2 class="text-3xl font-bold mb-8 text-center" style="font-family: 'Padauk', sans-serif;">အထူးအကျိုးအစီအစဉ်ပိုင်ဆိုင်မှုများ</h2>
+        
+        <!-- Loading Spinner -->
+        <div id="loading" class="text-center py-20">
+            <div class="inline-block animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-900"></div>
+            <p class="mt-4 text-gray-600" style="font-family: 'Padauk', sans-serif;">နောက်ဆုံးပိုင်ဆိုင်မှုများ ရယူနေသည်...</p>
+        </div>
+
+        <!-- Property Grid -->
+        <div id="propertyGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 hidden">
+            <!-- Properties will be injected here -->
+        </div>
+
+        <!-- AdSense Placeholder 2: Between Listings -->
+        <div class="my-12">
+            <div class="adsense-placeholder bg-gray-200 border-2 border-dashed border-gray-400 h-64 flex items-center justify-center text-gray-500 rounded-lg" style="font-family: 'Padauk', sans-serif;">
+                <span>AdSense - ကြော်ငြာနေရာ (အလယ်အလတ်)</span>
+            </div>
+        </div>
+
+        <div id="propertyGridMore" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 hidden">
+            <!-- More properties will be injected here -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-blue-900 text-white py-16">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div>
+                <h3 class="text-2xl font-bold mb-4" style="font-family: 'Padauk', sans-serif;">မက်ထရို အိမ်ခြံမြေ</h3>
+                <p class="text-gray-300 font-light" style="font-family: 'Padauk', sans-serif;">မန္တလေးမြို့ရှိ အဆင့်မြင့် အိမ်ခြံမြေ ဝန်ဆောင်မှု ပေးသည့် ယုံကြည်အားထားရသော ကုမ္ပဏီ။</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4 uppercase tracking-wider" style="font-family: 'Padauk', sans-serif;">လင်ခ်များ</h4>
+                <ul class="space-y-2 text-gray-300" style="font-family: 'Padauk', sans-serif;">
+                    <li><a href="#" class="hover:text-white">ကိုယ်ရေးအချက်အလက်မူဝါဒ</a></li>
+                    <li><a href="#" class="hover:text-white">ဝန်ဆောင်မှုအခြေအနေများ</a></li>
+                    <li><a href="#" class="hover:text-white">ကူညီမှု</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4 uppercase tracking-wider" style="font-family: 'Padauk', sans-serif;">ဆက်သွယ်ရန်</h4>
+                <p class="text-gray-300" style="font-family: 'Padauk', sans-serif;">မန္တလေးမြို့ အမှတ် ၁၂၃</p>
+                <p class="text-gray-300" style="font-family: 'Padauk', sans-serif;">info@metrorealty.com</p>
+                <p class="text-gray-300" style="font-family: 'Padauk', sans-serif;">+959 123 456 789</p>
+            </div>
+        </div>
+
+        <!-- AdSense Placeholder 3: Footer -->
+        <div class="container mx-auto px-4 mt-12">
+            <div class="adsense-placeholder bg-blue-800 border-2 border-dashed border-blue-700 h-24 flex items-center justify-center text-blue-300 rounded-lg" style="font-family: 'Padauk', sans-serif;">
+                <span>AdSense - ကြော်ငြာနေရာ (အောက်ခြေ)</span>
+            </div>
+        </div>
+
+        <div class="border-t border-blue-800 mt-12 pt-8 text-center text-gray-400 text-sm" style="font-family: 'Padauk', sans-serif;">
+            &copy; ၂၀၂၆ မက်ထရို အိမ်ခြံမြေ။ အားလုံးအခွင့်အရေးများ ကာကွယ်ထားသည်။
+        </div>
+    </footer>
+
+    <!-- Property Modal -->
+    <div id="propertyModal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black bg-opacity-75" id="modalOverlay"></div>
+        <div class="bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto relative z-10">
+            <button id="closeModal" class="absolute top-4 right-4 text-gray-500 hover:text-black text-2xl">
+                <i class="fas fa-times"></i>
+            </button>
+            <div id="modalContent">
+                <!-- Content injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Contact Buttons -->
+    <div class="fixed bottom-6 right-6 flex flex-col space-y-3 z-50">
+        <a href="https://wa.me/959123456789" target="_blank" class="bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform text-2xl" title="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="viber://chat?number=959123456789" target="_blank" class="bg-purple-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform text-2xl" title="Viber">
+            <i class="fab fa-viber"></i>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
