@@ -5,7 +5,7 @@
 // Configuration
 const CONFIG = {
     // Replace with your Google Sheets ID
-    SHEET_ID: 'YOUR_GOOGLE_SHEET_ID_HERE',
+    SHEET_ID: 'https://docs.google.com/spreadsheets/d/11dFfJpHdIM8h1MsunCuf333F-YmgdQiDmEuPzWPezFg/edit?usp=drivesdk',
     // Replace with your API Key
     API_KEY: 'YOUR_GOOGLE_API_KEY_HERE',
     // Sheet name (default: Sheet1)
